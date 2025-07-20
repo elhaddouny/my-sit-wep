@@ -1,32 +1,272 @@
-!DOCTYPE html>
-<html lang="ar">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>Elhaddouny | رائد أعمال</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>محمد الحدوني | خبير تسيير مقاولات</title>
+  <style>
+    /* CSS Code - يمكنك وضعه في ملف style.css منفصل */
+    :root {
+      --primary-color: #2c3e50; /* أزرق داكن */
+      --secondary-color: #e74c3c; /* أحمر */
+      --background-color: #ecf0f1; /* رمادي فاتح */
+      --text-color: #34495e;
+      --white-color: #ffffff;
+    }
+
+    body {
+      font-family: 'Cairo', sans-serif; /* استخدام خط عربي احترافي مثل Cairo */
+      margin: 0;
+      padding: 0;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.8;
+    }
+
+    .container {
+      width: 85%;
+      margin: auto;
+      overflow: hidden;
+      padding: 0 20px;
+    }
+
+    header {
+      background: var(--primary-color);
+      color: var(--white-color);
+      padding: 40px 0;
+      text-align: center;
+      border-bottom: 5px solid var(--secondary-color);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      font-weight: 700;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    nav {
+      background: #34495e;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 20px;
+    }
+
+    nav a {
+      color: var(--white-color);
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--secondary-color);
+    }
+
+    section {
+      padding: 60px 0;
+      border-bottom: 1px solid #bdc3c7;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 40px;
+      position: relative;
+    }
+    
+    section h2::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 4px;
+        background: var(--secondary-color);
+        margin: 10px auto 0;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--secondary-color);
+      color: var(--white-color);
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #c0392b;
+      transform: translateY(-2px);
+    }
+    
+    /* قسم الخدمات */
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        text-align: center;
+    }
+
+    .service-item {
+        background: var(--white-color);
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .service-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .service-item h3 {
+        color: var(--secondary-color);
+        font-size: 1.5rem;
+    }
+
+    /* قسم المشاريع */
+    .project-item {
+        background: var(--white-color);
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+    
+    .project-item h3 {
+        color: var(--primary-color);
+    }
+
+    /* قسم التواصل */
+    #contact {
+      text-align: center;
+    }
+
+    #contact .contact-methods {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    footer {
+      background: var(--primary-color);
+      color: var(--white-color);
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 0;
+    }
+  </style>
+  <!-- لإضافة الخط من جوجل -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <header>
     <div class="container">
-      <h1> محمد الحدّوني</h1>
-      <p>رائد أعمال مغربي ✨ | أسعى لبناء مستقبل غير عادي</p>
-      <a href="#contact" class="btn">تواصل معي الآن</a>
+      <h1>محمد الحدوني</h1>
+      <p>خبير في تسيير وإدارة مشاريع المقاولات</p>
     </div>
   </header>
 
+  <nav>
+    <div class="container">
+      <ul>
+        <li><a href="#about">من أنا</a></li>
+        <li><a href="#services">خدماتي</a></li>
+        <li><a href="#projects">مشاريعي</a></li>
+        <li><a href="#contact">تواصل معي</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <section id="about">
-    <h2>من أنا؟</h2>
-    <p>أنا شاب طموح، أتعلم، أطور ذاتي، وأبني مشروعي الرقمي خطوة بخطوة. هذا الموقع هو بداية رحلتي 👣</p>
+    <div class="container">
+      <h2>من أنا؟</h2>
+      <p>
+        متخصص شغوف في مجال تسيير المقاولات، أمتلك خبرة في إدارة المشاريع من مرحلة التخطيط الأولي وحتى التسليم النهائي. أسعى دائمًا لتحقيق أفضل النتائج من خلال تطبيق أحدث أساليب الإدارة، وضمان الجودة، والالتزام بالميزانية والجداول الزمنية المحددة. هدفي هو تحويل رؤية العملاء إلى واقع ملموس وناجح.
+      </p>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2>خدماتي</h2>
+      <div class="services-grid">
+        <div class="service-item">
+          <h3>إدارة المشاريع</h3>
+          <p>إشراف كامل على المشاريع لضمان تنفيذها بكفاءة عالية وفي الوقت المحدد.</p>
+        </div>
+        <div class="service-item">
+          <h3>التخطيط ووضع الميزانيات</h3>
+          <p>إعداد خطط عمل دقيقة وتقديرات مالية واقعية للمشاريع الإنشائية.</p>
+        </div>
+        <div class="service-item">
+          <h3>استشارات فنية</h3>
+          <p>تقديم استشارات متخصصة لتحسين جودة العمل وتقليل التكاليف.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+        <h2>مشاريعي وإنجازاتي</h2>
+        <!-- مثال لمشروع 1 -->
+        <div class="project-item">
+            <h3>مشروع بناء فيلا سكنية - (اسم المدينة)</h3>
+            <p><strong>الدور:</strong> مدير المشروع | <strong>المدة:</strong> 2023 - 2024</p>
+            <p>إدارة كاملة للمشروع بدءًا من التصاميم الأولية وحتى تسليم المفتاح، مع تحقيق وفر في الميزانية بنسبة 10%.</p>
+        </div>
+        <!-- مثال لمشروع 2 -->
+        <div class="project-item">
+            <h3>مشروع تشطيبات برج تجاري - (اسم المدينة)</h3>
+            <p><strong>الدور:</strong> مشرف تنفيذ | <strong>المدة:</strong> 2022</p>
+            <p>الإشراف على جميع أعمال التشطيبات الداخلية والخارجية وضمان مطابقتها لأعلى معايير الجودة العالمية.</p>
+        </div>
+        <!-- يمكنك إضافة المزيد من المشاريع هنا -->
+    </div>
   </section>
 
   <section id="contact">
-    <h2>تواصل معي</h2>
-    <p>راسلني على الواتساب 📱 أو الإيميل وسأرد عليك سريعًا.</p>
-    <a href="https://wa.me/qr/QDZGNXBRQXG6O1" class="btn">واتساب</a>
+    <div class="container">
+      <h2>هل لديك مشروع؟ لنتحدث!</h2>
+      <p>أنا متاح لمناقشة مشروعك القادم. يمكنك التواصل معي عبر الواتساب أو البريد الإلكتروني.</p>
+      <div class="contact-methods">
+        <a href="https://wa.me/qr/QDZGNXBRQXG6O1" class="btn">واتساب</a>
+        <a href="mailto:your-email@example.com" class="btn">بريد إلكتروني</a>
+      </div>
+    </div>
   </section>
 
   <footer>
-    <p>جميع الحقوق محفوظة © 2025 | Elhaddouny.com</p>
+    <div class="container">
+      <p>جميع الحقوق محفوظة © 2025 | محمد الحدوني</p>
+    </div>
   </footer>
+
 </body>
 </html>
