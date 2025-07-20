@@ -1,57 +1,179 @@
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #111;
-  color: #eee;
-  text-align: center;
-  direction: rtl;
-}
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>محمد الحدوني | خبير تسيير مقاولات</title>
+  
+  <!-- تم دمج كود CSS الجديد الذي أرسلته هنا -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #111;
+      color: #eee;
+      text-align: center;
+      direction: rtl;
+    }
 
-header {
-  background-color: #0f172a;
-  padding: 100px 20px;
-}
+    header {
+      background-color: #0f172a;
+      padding: 100px 20px;
+    }
 
-.container {
-  max-width: 800px;
-  margin: auto;
-}
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 0 20px; /* إضافة padding لضمان عدم التصاق المحتوى بالحواف */
+    }
 
-h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
-  color: #38bdf8;
-}
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      color: #38bdf8;
+    }
 
-p {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-}
+    p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      line-height: 1.7; /* تحسين قراءة النصوص الطويلة */
+    }
 
-.btn {
-  background-color: #38bdf8;
-  color: #000;
-  padding: 12px 30px;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
-  transition: 0.3s;
-}
+    .btn {
+      display: inline-block; /* لضمان تطبيق الـ margin بشكل صحيح */
+      background-color: #38bdf8;
+      color: #000;
+      padding: 12px 30px;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+      margin: 10px; /* إضافة هامش بسيط للأزرار */
+    }
 
-.btn:hover {
-  background-color: #0ea5e9;
-  color: white;
-}
+    .btn:hover {
+      background-color: #0ea5e9;
+      color: white;
+    }
 
-section {
-  padding: 60px 20px;
-  background-color: #1e293b;
-  margin-top: 20px;
-}
+    section {
+      padding: 60px 20px;
+      background-color: #1e293b;
+      margin-top: 20px;
+    }
+    
+    /* تنسيقات إضافية للأقسام الجديدة */
+    section h2 {
+        font-size: 2.5em;
+        color: #38bdf8;
+        margin-bottom: 40px;
+    }
 
-footer {
-  background-color: #0f172a;
-  padding: 30px;
-  font-size: 0.9em;
-  color: #999;
-}
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        text-align: center;
+    }
+
+    .service-item, .project-item {
+        background: #0f172a;
+        padding: 25px;
+        border-radius: 10px;
+        border: 1px solid #38bdf8;
+    }
+    
+    .project-item {
+        margin-bottom: 20px;
+        text-align: right; /* ليتناسب مع محتوى المشاريع */
+    }
+
+    .project-item h3 {
+        color: #38bdf8;
+    }
+
+    footer {
+      background-color: #0f172a;
+      padding: 30px;
+      font-size: 0.9em;
+      color: #999;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>محمد الحدوني</h1>
+      <p>خبير في تسيير وإدارة مشاريع المقاولات</p>
+      <a href="#contact" class="btn">تواصل معي الآن</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <h2>من أنا؟</h2>
+      <p>
+        متخصص شغوف في مجال تسيير المقاولات، أمتلك خبرة في إدارة المشاريع من مرحلة التخطيط الأولي وحتى التسليم النهائي. أسعى دائمًا لتحقيق أفضل النتائج من خلال تطبيق أحدث أساليب الإدارة، وضمان الجودة، والالتزام بالميزانية والجداول الزمنية المحددة.
+      </p>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2>خدماتي</h2>
+      <div class="services-grid">
+        <div class="service-item">
+          <h3>إدارة المشاريع</h3>
+          <p>إشراف كامل على المشاريع لضمان تنفيذها بكفاءة عالية وفي الوقت المحدد.</p>
+        </div>
+        <div class="service-item">
+          <h3>التخطيط والميزانيات</h3>
+          <p>إعداد خطط عمل دقيقة وتقديرات مالية واقعية للمشاريع الإنشائية.</p>
+        </div>
+        <div class="service-item">
+          <h3>استشارات فنية</h3>
+          <p>تقديم استشارات متخصصة لتحسين جودة العمل وتقليل التكاليف.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+        <h2>مشاريعي وإنجازاتي</h2>
+        <div class="project-item">
+            <h3>مشروع بناء فيلا سكنية - (اسم المدينة)</h3>
+            <p><strong>الدور:</strong> مدير المشروع | <strong>المدة:</strong> 2023 - 2024</p>
+            <p>إدارة كاملة للمشروع بدءًا من التصاميم الأولية وحتى تسليم المفتاح، مع تحقيق وفر في الميزانية بنسبة 10%.</p>
+        </div>
+        <div class="project-item">
+            <h3>مشروع تشطيبات برج تجاري - (اسم المدينة)</h3>
+            <p><strong>الدور:</strong> مشرف تنفيذ | <strong>المدة:</strong> 2022</p>
+            <p>الإشراف على جميع أعمال التشطيبات الداخلية والخارجية وضمان مطابقتها لأعلى معايير الجودة.</p>
+        </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>هل لديك مشروع؟ لنتحدث!</h2>
+      <p>أنا متاح لمناقشة مشروعك القادم. يمكنك التواصل معي عبر الواتساب أو البريد الإلكتروني.</p>
+      <div>
+        <a href="https://wa.me/qr/QDZGNXBRQXG6O1" class="btn">واتساب</a>
+        <a href="mailto:your-email@example.com" class="btn">بريد إلكتروني</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>جميع الحقوق محفوظة © 2025 | Elhaddouny.com</p>
+  </footer>
+
+  <script>
+    console.log("موقع Elhaddouny جاهز 💻🔥");
+  </script>
+
+</body>
+</html>
